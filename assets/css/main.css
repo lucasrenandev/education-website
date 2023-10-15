@@ -159,6 +159,7 @@ section {
   transform: translate(-50%, -50%);
 }
 
+/* ====== Header ====== */
 .header {
   position: fixed;
   top: 0;
@@ -344,6 +345,7 @@ section {
   font-weight: 400;
 }
 
+/* ====== Home section ====== */
 .home {
   height: 100vh;
   background-image: url("../images/home.jpg");
@@ -382,6 +384,7 @@ section {
   color: var(--white);
 }
 
+/* ====== About section ====== */
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -440,6 +443,7 @@ section {
   margin-bottom: 2rem;
 }
 
+/* ====== Subject section ====== */
 .subject-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -484,6 +488,7 @@ section {
   color: #777;
 }
 
+/* ====== Courses section ====== */
 .courses-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -595,6 +600,7 @@ section {
   margin-right: 0.5rem;
 }
 
+/* ====== Teacher section ====== */
 .teacher .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -665,6 +671,7 @@ section {
   font-weight: 400;
 }
 
+/* ====== Review section ====== */
 .review-container .slide {
   padding: 0 0.5rem;
 }
@@ -753,6 +760,7 @@ section {
   color: var(--secondary);
 }
 
+/* ====== Blog section ====== */
 .blog-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -828,6 +836,7 @@ section {
   line-height: 2;
 }
 
+/* ====== Contact section ====== */
 .contact-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -889,6 +898,7 @@ section {
   cursor: pointer;
 }
 
+/* ====== Footer ====== */
 .footer {
   width: 100%;
   padding: 5rem 7%;
