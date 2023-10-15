@@ -1,0 +1,172 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: var(--box-shadow);
+    @media (max-width: 991px) {
+        padding: 2rem 4rem;
+    }
+    .navbar {
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 110%;
+            right: -110%;
+            width: 30rem;
+            height: auto;
+            background-color: var(--white);
+            box-shadow: var(--box-shadow);
+            border-radius: 0.5rem;
+            transition: right 0.3s ease;
+            &.active {
+                right: 2rem;
+            }
+        }
+    }
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.header .logo i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.header .nav-list {
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.header .nav-list li {
+    margin: 0 1rem;
+    @media (max-width: 768px) {
+        margin: 0;
+    }
+}
+
+.header .nav-list li a {
+    position: relative;
+    color: var(--black);
+    font-size: 1.7rem;
+    font-weight: 400;
+    padding-block-end: 1rem;
+    transition: color 0.5s ease;
+    &:hover {
+        color: var(--primary-color);
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.5rem;
+        border-block: 0.1rem solid var(--primary-color);
+        transform: scaleX(0.2);
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+    &:is(:hover)::before {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    @media (max-width: 768px) {
+        display: block;
+        padding-block: 1rem;
+        margin: 1rem 2.5rem;
+        font-size: 2rem;
+    }
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .icons div {
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.header .icons #menu-icon {
+    z-index: 1010;
+    display: none;
+    @media (max-width: 768px) {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.header .form {
+    position: absolute;
+    top: 115%;
+    right: -115%;
+    width: 35rem;
+    height: auto;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    transition: right 0.35s ease;
+    &.active {
+        right: 2rem;
+    }
+    @media (max-width: 320px) {
+        width: 30rem;
+    }
+}
+
+.header .form h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.header .form .input-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header .form .input-field input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.header .form .remember {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header .form .remember label {
+    font-size: 1.5rem;
+    font-weight: 400;
+}

@@ -1,0 +1,72 @@
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+    gap: 2rem;
+    @media (max-width: 320px) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+}
+
+.blog-container .box {
+    position: relative;
+    background-color: var(--secondary);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    &:hover .image img {
+        transform: scale(1.1);
+    }
+}
+
+.blog-container .box .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-container .box .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem 2rem 0 0;
+    transition: transform 0.4s ease;
+}
+
+.blog-container .box .image h4 {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    background-color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem 0 2rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.blog-container .box .content {
+    padding: 2rem;
+}
+
+.blog-container .box .content > span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+
+.blog-container .box .content span i {
+    margin-right: 0.5rem;
+}
+
+.blog-container .box .content h3 {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.blog-container .box .content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2;
+}

@@ -1,0 +1,107 @@
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+    gap: 2rem;
+    @media (max-width: 320px) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+}
+
+.courses-container .courses-box .image {
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+
+.courses-container .courses-box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.courses-container .courses-box .image h4 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;    
+    padding: 0.5rem 1.5rem;
+    background-color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.courses-container .courses-box .content {
+    position: relative;
+    padding: 2.5rem 2rem 2rem;
+    border: 0.1rem solid var(--primary-color);
+}
+
+.courses-container .courses-box .content h5 {
+    position: absolute;
+    top: -3rem;
+    right: 1.5rem;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--secondary);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.courses-container .courses-box .content p {
+    color: #444;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.courses-container .courses-box .content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #444;
+    text-transform: capitalize;
+}
+
+.courses-container .courses-box .content .stars {
+    margin-top: 1rem; 
+}
+
+.courses-container .courses-box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
+
+.courses-container .courses-box .content .stars span {
+    color: #777;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+.courses-container .courses-box .content .icons {
+    border-top: 0.1rem solid var(--primary-color);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.courses-container .courses-box .content .icons span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #444;
+}
+
+.courses-container .courses-box .content .icons span i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}

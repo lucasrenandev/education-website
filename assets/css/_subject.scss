@@ -1,0 +1,43 @@
+.subject-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.subject-content .subject-box {
+    background-color: var(--secondary);
+    padding: 3.5rem 2rem;
+    border: 0.1rem solid var(--primary-color);
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: var(--primary-color);
+    }
+    &:hover h3 {
+        color: var(--white);
+    }
+    &:hover p {
+        color: var(--secondary);
+    }
+}
+
+.subject-content .subject-box img {
+    width: 10rem;
+    height: auto;
+}
+
+.subject-content .subject-box h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #444;
+    text-transform: capitalize;
+}
+
+.subject-content .subject-box p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #777;
+}
